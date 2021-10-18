@@ -120,6 +120,9 @@ int main(void)
 		HAL_ADC_Start(&hadc1);
 
 		while (!adc_data_ready_flag); // wait for new adc data
+		// First time HAL_ADC_Start(&hadc1); is called
+		// data successfully received and flag updated
+		// next times hangs in while loop
 
   }
 
